@@ -14,11 +14,11 @@ TOKEN = "PUT_YOUR_TOKEN_HERE"
 
 # รายการห้อง (Text Channel ID) ที่ให้ระบบลบข้อความอัตโนมัติทำงาน
 # ใส่เป็น set ของตัวเลข เช่น {123456789012345678, 987654321098765432}
-TARGET_CHANNEL_IDS: set[int] = set()
+TARGET_CHANNEL_IDS: set[int] = {1440191545251860594}
 
 # รายการห้องที่อนุญาตให้ใช้คำสั่งดาวน์โหลด mp3 (!ytmp3 / /ytmp3)
 # ถ้าเว้นว่างไว้ (set() ว่าง) = อนุญาตทุกห้อง
-YTMP3_ALLOWED_CHANNEL_IDS: set[int] = set()
+YTMP3_ALLOWED_CHANNEL_IDS: set[int] = {1440191545251860594}
 
 # ค่าเริ่มต้นของระบบลบข้อความอัตโนมัติ (False = ปิด, True = เปิด)
 AUTO_DELETE_ENABLED: bool = False
@@ -27,7 +27,7 @@ AUTO_DELETE_ENABLED: bool = False
 AUTO_DELETE_DELAY_SECONDS: int = 10
 
 # เก็บ ID ของข้อความที่ "ไม่ต้องลบ" แม้ระบบ auto delete จะเปิดอยู่
-EXEMPT_MESSAGE_IDS: set[int] = set()
+EXEMPT_MESSAGE_IDS: set[int] = {1440232852544553053}
 
 # รายการ "คำ" หรือ "ข้อความ" ที่ถ้าพบในข้อความ จะทำให้เข้าข่ายลบอัตโนมัติ
 # - ถ้าเซ็ตนี้ว่างเปล่า -> ลบ "ทุกข้อความ" ตามเงื่อนไขเดิม
@@ -36,7 +36,7 @@ AUTO_DELETE_KEYWORDS: set[str] = set()
 
 # ระบบแอดมินภายในบอท
 # OWNER_IDS: แนะนำให้ใส่ ID ของเจ้าของบอท / เจ้าของเซิร์ฟเวอร์ที่ไว้ใจได้
-OWNER_IDS: set[int] = set()
+OWNER_IDS: set[int] = {1147798918973898762}
 # ADMIN_IDS: แอดมินที่เพิ่มผ่านคำสั่ง /admin_add_id หรือ !admin_add_id
 ADMIN_IDS: set[int] = set()
 
