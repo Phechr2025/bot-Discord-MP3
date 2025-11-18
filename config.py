@@ -1,0 +1,21 @@
+# ===================== CONFIG สำหรับแก้ไขค่าตั้งต่าง ๆ =====================
+
+# โทเคนบอท Discord
+TOKEN: str = "PUT_YOUR_TOKEN_HERE"
+
+# รายการห้อง (Text Channel ID) ที่ให้ระบบลบข้อความอัตโนมัติทำงาน
+# ตัวอย่าง: {123456789012345678, 987654321098765432}
+TARGET_CHANNEL_IDS: set[int] = set()
+
+# รายการห้องที่อนุญาตให้ใช้คำสั่งดาวน์โหลด mp3 (!ytmp3 / /ytmp3)
+# ถ้าเว้นว่างไว้ (set() ว่าง) = อนุญาตทุกห้อง
+YTMP3_ALLOWED_CHANNEL_IDS: set[int] = set()
+
+# OWNER / ADMIN ของบอท (ใส่เป็น user ID)
+# - OWNER_IDS: เจ้าของหลักของบอท (มีสิทธิ์ทุกอย่าง)
+# - ADMIN_IDS: แอดมินของบอท (ใช้คำสั่งแอดมินได้)
+OWNER_IDS: set[int] = set()
+ADMIN_IDS: set[int] = set()
+
+# ค่าเริ่มต้นเวลา (วินาที) ให้ระบบลบข้อความอัตโนมัติ
+AUTO_DELETE_DEFAULT_DELAY: int = 10
